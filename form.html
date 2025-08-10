@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form - Multi-Section Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        header, section, aside, footer {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        .media-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .media-item {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        video, audio {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 0 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+        
+        input:valid {
+            border-color: #27ae60;
+        }
+        
+        input:invalid:not(:placeholder-shown) {
+            border-color: #e74c3c;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row > div {
+            flex: 1;
+        }
+        
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-item input, .radio-item input {
+            width: auto;
+            margin: 0;
+        }
+        
+        .checkbox-item label, .radio-item label {
+            margin: 0;
+            font-weight: normal;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px 5px 0 0;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .reset-btn {
+            background: #95a5a6;
+        }
+        
+        .reset-btn:hover {
+            background: #7f8c8d;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Form - Multi-Section Web Page</h1>
+        <p>This page demonstrates the effective use of lists, tables, media, and comprehensive HTML5 forms with built-in validation.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Course Information</h2>
+            <h3>Learning Objectives</h3>
+            <ul>
+                <li>Use lists and tables effectively to organize content for clarity and accessibility</li>
+                <li>Embed media content using semantic HTML5 elements</li>
+                <li>Build structured HTML5 forms that are usable and visually intuitive</li>
+                <li>Apply various HTML5 form attributes to improve user interaction</li>
+                <li>Use built-in validation techniques without JavaScript</li>
+            </ul>
+            
+            <h3>Key Technologies Covered</h3>
+            <ol>
+                <li><strong>Semantic HTML5 Elements</strong> - header, main, section, article, aside, footer</li>
+                <li><strong>Form Controls</strong> - input types, fieldsets, labels, validation attributes</li>
+                <li><strong>Media Elements</strong> - video, audio, images with proper accessibility</li>
+                <li><strong>Data Organization</strong> - tables, lists, structured content</li>
+                <li><strong>Accessibility Features</strong> - ARIA labels, semantic structure, keyboard navigation</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Student Performance Data</h2>
+            <table>
+                <caption>HTML5 Form Assignment Scores</caption>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Submission Date</th>
+                        <th>Form Structure</th>
+                        <th>Validation</th>
+                        <th>Accessibility</th>
+                        <th>Total Score</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024001</td>
+                        <td>Alex Johnson</td>
+                        <td>2024-03-15</td>
+                        <td>18/20</td>
+                        <td>17/20</td>
+                        <td>19/20</td>
+                        <td>54/60</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>2024002</td>
+                        <td>Sarah Chen</td>
+                        <td>2024-03-14</td>
+                        <td>20/20</td>
+                        <td>19/20</td>
+                        <td>20/20</td>
+                        <td>59/60</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>2024003</td>
+                        <td>Marcus Rodriguez</td>
+                        <td>2024-03-16</td>
+                        <td>16/20</td>
+                        <td>15/20</td>
+                        <td>17/20</td>
+                        <td>48/60</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>2024004</td>
+                        <td>Emily Watson</td>
+                        <td>2024-03-13</td>
+                        <td>19/20</td>
+                        <td>18/20</td>
+                        <td>18/20</td>
+                        <td>55/60</td>
+                        <td>A-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Learning Resources</h2>
+            <div class="media-container">
+                <div class="media-item">
+                    <h3>HTML5 Tutorial Video</h3>
+                    <video controls preload="metadata" poster="https://via.placeholder.com/400x225/3498db/ffffff?text=HTML5+Tutorial">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English">
+                        Your browser does not support the video tag. Please update your browser to view this content.
+                    </video>
+                    <p><em>Introduction to HTML5 Forms and Validation Techniques</em></p>
+                </div>
+                
+                <div class="media-item">
+                    <h3>Audio Lecture</h3>
+                    <audio controls preload="metadata">
+                        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                        Your browser does not support the audio element. Please use a modern browser to listen to this content.
+                    </audio>
+                    <p><em>Advanced Form Accessibility and Best Practices</em></p>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <h3>Reference Diagram</h3>
+                <img src="https://via.placeholder.com/600x300/2c3e50/ffffff?text=HTML5+Form+Elements+Structure" 
+                     alt="Diagram showing HTML5 form elements and their relationships, including fieldsets, labels, inputs, and validation attributes"
+                     width="600" height="300">
+                <p><em>HTML5 Form Structure and Validation Flow</em></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Student Registration Form</h2>
+            <p>Complete this form to register for the Advanced HTML5 Development course. All fields marked with <span class="required">*</span> are required.</p>
+            
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <input type="text" 
+                                   id="firstName" 
+                                   name="firstName" 
+                                   required 
+                                   minlength="2" 
+                                   maxlength="50"
+                                   pattern="[A-Za-z\s]+"
+                                   placeholder="Enter your first name"
+                                   autocomplete="given-name">
+                        </div>
+                        
+                        <div>
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <input type="text" 
+                                   id="lastName" 
+                                   name="lastName" 
+                                   required 
+                                   minlength="2" 
+                                   maxlength="50"
+                                   pattern="[A-Za-z\s]+"
+                                   placeholder="Enter your last name"
+                                   autocomplete="family-name">
+                        </div>
+                    </div>
+                    
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           required 
+                           placeholder="student@example.com"
+                           autocomplete="email">
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   required 
+                                   pattern="[\+]?[\d\s\-\(\)]{10,}"
+                                   placeholder="+1 (555) 123-4567"
+                                   autocomplete="tel">
+                        </div>
+                        
+                        <div>
+                            <label for="birthdate">Date of Birth <span class="required">*</span></label>
+                            <input type="date" 
+                                   id="birthdate" 
+                                   name="birthdate" 
+                                   required 
+                                   min="1950-01-01" 
+                                   max="2010-12-31"
+                                   autocomplete="bdate">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    
+                    <label for="studentId">Student ID (Read-only)</label>
+                    <input type="text" 
+                           id="studentId" 
+                           name="studentId" 
+                           value="2024005" 
+                           readonly 
+                           autocomplete="off">
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="currentYear">Current Academic Year <span class="required">*</span></label>
+                            <select id="currentYear" name="currentYear" required>
+                                <option value="">Select your year</option>
+                                <option value="freshman">Freshman (1st Year)</option>
+                                <option value="sophomore">Sophomore (2nd Year)</option>
+                                <option value="junior">Junior (3rd Year)</option>
+                                <option value="senior">Senior (4th Year)</option>
+                                <option value="graduate">Graduate Student</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="gpa">Current GPA (0.0-4.0)</label>
+                            <input type="number" 
+                                   id="gpa" 
+                                   name="gpa" 
+                                   min="0.0" 
+                                   max="4.0" 
+                                   step="0.01"
+                                   placeholder="3.75">
+                        </div>
+                    </div>
+                    
+                    <label for="major">Major/Program <span class="required">*</span></label>
+                    <input type="text" 
+                           id="major" 
+                           name="major" 
+                           required 
+                           minlength="3"
+                           placeholder="Computer Science"
+                           list="majorsList">
+                    
+                    <datalist id="majorsList">
+                        <option value="Computer Science">
+                        <option value="Information Technology">
+                        <option value="Web Development">
+                        <option value="Software Engineering">
+                        <option value="Digital Media">
+                    </datalist>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Preferences</legend>
+                    
+                    <label>Learning Format <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="online" name="format" value="online" required>
+                            <label for="online">Online Classes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="inperson" name="format" value="inperson" required>
+                            <label for="inperson">In-Person Classes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="hybrid" name="format" value="hybrid" required>
+                            <label for="hybrid">Hybrid (Online + In-Person)</label>
+                        </div>
+                    </div>
+                    
+                    <label for="sessionTime">Preferred Session Time <span class="required">*</span></label>
+                    <input type="time" 
+                           id="sessionTime" 
+                           name="sessionTime" 
+                           required 
+                           min="08:00" 
+                           max="20:00">
+                    
+                    <label>Additional Courses of Interest</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="javascript" name="additionalCourses" value="javascript">
+                            <label for="javascript">Advanced JavaScript</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="react" name="additionalCourses" value="react">
+                            <label for="react">React Development</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nodejs" name="additionalCourses" value="nodejs">
+                            <label for="nodejs">Node.js Backend</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="database" name="additionalCourses" value="database">
+                            <label for="database">Database Design</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <label for="experience">Previous Web Development Experience</label>
+                    <select id="experience" name="experience">
+                        <option value="none">No Experience</option>
+                        <option value="beginner">Beginner (0-1 years)</option>
+                        <option value="intermediate">Intermediate (1-3 years)</option>
+                        <option value="advanced">Advanced (3+ years)</option>
+                    </select>
+                    
+                    <label for="portfolio">Portfolio URL</label>
+                    <input type="url" 
+                           id="portfolio" 
+                           name="portfolio" 
+                           placeholder="https://your-portfolio.com"
+                           pattern="https?://.+">
+                    
+                    <label for="motivation">Why do you want to take this course? <span class="required">*</span></label>
+                    <textarea id="motivation" 
+                              name="motivation" 
+                              required 
+                              minlength="50" 
+                              maxlength="500"
+                              rows="4" 
+                              placeholder="Please describe your motivation and goals for taking this course (minimum 50 characters)..."></textarea>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">I agree to the course terms and conditions <span class="required">*</span></label>
+                    </div>
+                    
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to course updates and newsletter</label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset" class="reset-btn">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Form Validation Features</h2>
+        <h3>Implemented HTML5 Validation Techniques:</h3>
+        <dl>
+            <dt><strong>Required Fields</strong></dt>
+            <dd>Essential fields marked with asterisks and <code>required</code> attribute</dd>
+            
+            <dt><strong>Input Types</strong></dt>
+            <dd>Email, URL, telephone, date, time, number inputs with built-in validation</dd>
+            
+            <dt><strong>Pattern Matching</strong></dt>
+            <dd>Regular expressions for names, phone numbers, and custom validation</dd>
+            
+            <dt><strong>Length Constraints</strong></dt>
+            <dd>Minimum and maximum character limits using <code>minlength</code> and <code>maxlength</code></dd>
+            
+            <dt><strong>Numeric Ranges</strong></dt>
+            <dd>Min/max values and step increments for numeric inputs</dd>
+            
+            <dt><strong>Accessibility Features</strong></dt>
+            <dd>Proper labels, fieldsets, legends, and autocomplete attributes</dd>
+        </dl>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Advanced HTML5 Development Course. This demonstration showcases comprehensive HTML5 form capabilities with semantic structure, accessibility features, and native validation.</p>
+        <p><em>No JavaScript validation required - all validation is handled by native HTML5 attributes.</em></p>
+    </footer>
+</body>
+</html>
